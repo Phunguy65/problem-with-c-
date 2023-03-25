@@ -14,7 +14,7 @@
 * <mark>Cần đảm bảo cài đặt cả 2 cái trên nếu không chương trình báo lỗi</mark>
 ## 2. Chạy chương trình sinh testcases:
 ### a. Thư mục <code>.vscode</code>:
-* Là Folder chauws cấu hình để chạy chương trình sinh testcases trong 
+* Là Folder chứa cấu hình để chạy chương trình sinh testcases trong Visual Studio Code 
 ### b. File <code>rndlib.h</code>:
 * Là thư viện hỗ trợ sinh số ngẫu nhiên
 ### c. File <code>generator.cpp</code>:

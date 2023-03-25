@@ -34,7 +34,6 @@ void Complete(){
 }
 int main()
 {
-    srand(time(NULL));
     for (int iTest = 1; iTest <= NTEST; iTest++)
     {
        cout<<"[INFO] Creating test "<<iTest <<"!"<<endl;

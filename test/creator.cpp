@@ -5,7 +5,7 @@ const string solution = "solution";
 // Tên chương trình sinh test
 const string generator = "generator";
 // Số lượng sinh test
-const int NTEST = 20;
+const int NTEST = 6;
 // Hàm chạy chương trình sinh test
 void generatorInput(const string &iTest, const string generator){
     cout<<"[INFO] Generating Testcase Input!"<<endl;
@@ -22,15 +22,15 @@ void generatorOutput(const string &iTest, const string solution){
     system(cmd.c_str());
     cout<<"[INFO] Complete!"<<endl;
 }
-void ziptestcase(){
+void Complete(){
     cout<<"[INFO] Compressing testcases!"<<endl;
-    system("tar -a -c -f testcases.zip *.in *.out");
-    cout<<"[INFO] Complete!"<<endl;
-}
-void removetestcases(){
+    system("mkdir solution");
+    system("tar -a -c -f solution/testcases.zip *.in *.out");
+    system("copy solution.cpp solution");
+    system("copy solution.md solution");
     cout<<"[INFO] Removing testcases folder!"<<endl;
-    system("del *.in *.out");
-     cout<<"[INFO] Complete!"<<endl;
+    system("del *.in *.out solution.exe generator.exe");
+    cout<<"[INFO] Complete!"<<endl;
 }
 int main()
 {
@@ -42,7 +42,6 @@ int main()
        generatorOutput(to_string(iTest), solution);
        cout<<"[INFO] Test "<<iTest<<" is created!"<<endl;
     }
-    ziptestcase();
-    removetestcases();
+    Complete();
     return 0;
 }

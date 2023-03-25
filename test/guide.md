@@ -33,7 +33,7 @@ int main(){
     }
 }
 ```
-* Lưu ý: File này phải đảm bảo có lệnh <mark>cout</mark> ra biến, nếu không File *.in sẽ rỗng
+* Lưu ý: File này phải đảm bảo có lệnh <code>cout</code> ra biến, nếu không File *.in sẽ rỗng
 ### d. File <code>solution.cpp</code>
 * Là nơi bạn viết lời giải cho đề bài
 ### e. File <code>creator.cpp</code>

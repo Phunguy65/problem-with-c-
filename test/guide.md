@@ -5,16 +5,22 @@
     * Tự động nén các file *.in *.out thành testcases.zip
     * Xuất file solution.cpp, solution.md, testcases.zip vào folder solution
 ## 1. Chuẩn bị:
+* Sau đây là hướng dẫn cài môi trường để chạy C/C++ trong Visual Studio Code, nếu bạn đã biết hoặc đã cài vui lòng bỏ qua
+* <mark>Cần đảm bảo cài đặt cả 2 cái dưới nếu không chương trình báo lỗi</mark>
 * Cài đặt MSYS2:
     * Windows của bạn cần cài đặt <code>MSYS2</code> để tiến hành biên dịch, debug cho ngôn ngữ c++ trong vscode. Nếu chưa hãy tải về tại đây [MSYS2](https://github.com/msys2/msys2-installer/releases/download/2022-06-03/msys2-x86_64-20220603.exe)
-    * Sau khi cài đặt hãy chạy MYS2, một cửa sổ mở ra hãy <code>copy</code> và paste vào trong cửa sổ lệnh <code>pacman -S --needed base-devel mingw-w64-x86_64-toolchain</code>
+    * Sau khi cài đặt hãy chạy MYS2, một cửa sổ mở ra hãy copy và paste vào trong cửa sổ lệnh <code>pacman -S --needed base-devel mingw-w64-x86_64-toolchain</code>
     * Ấn <code>Enter</code> và nhập chữ <code>Y</code> để cài đặt
+    * Sau khi hoàn tất cài đặt nhấn phím <code>Windows</code> gõ <code>Edit environment variables for your account</code>
+    * Cửa sổ hiện ra nhấp <code>Path</code> trong vùng <code>User variables</code> và chọn <code>Edit</code>
+    * Chọn <code>New</code> và paste vào ô dòng sau <code>C:\msys64\mingw64\bin</code>
+
 * Cài đặt Extensions C/C++ trong Visual Studio Code:
     * Mở mục Extensions, tìm C/C++, sau đó tiến hành cài đặt C/C++ của <code>Microsoft</code>
-* <mark>Cần đảm bảo cài đặt cả 2 cái trên nếu không chương trình báo lỗi</mark>
+* <code>Sau khi đã hoàn thành cài đặt thành công cả hai hãy lên [đây](https://code.visualstudio.com/docs/cpp/config-mingw#_run-helloworldcpp) để biết cách chạy file c++ trong VScode</code>
 ## 2. Chạy chương trình sinh testcases:
 ### a. Thư mục <code>.vscode</code>:
-* Là Folder chứa cấu hình để chạy chương trình sinh testcases trong Visual Studio Code 
+* Là Folder chauws cấu hình để chạy chương trình sinh testcases trong 
 ### b. File <code>rndlib.h</code>:
 * Là thư viện hỗ trợ sinh số ngẫu nhiên
 ### c. File <code>generator.cpp</code>:
@@ -33,7 +39,7 @@ int main(){
     }
 }
 ```
-* Lưu ý: File này phải đảm bảo có lệnh <code>cout</code> ra biến, nếu không File *.in sẽ rỗng
+* Lưu ý: File này phải đảm bảo có lệnh <mark>cout</mark> ra biến, nếu không File *.in sẽ rỗng
 ### d. File <code>solution.cpp</code>
 * Là nơi bạn viết lời giải cho đề bài
 ### e. File <code>creator.cpp</code>

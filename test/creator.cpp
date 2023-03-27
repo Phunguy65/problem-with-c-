@@ -9,7 +9,6 @@ const int NTEST = 6;
 // Hàm chạy chương trình sinh test
 void generatorInput(const string &iTest, const string generator){
     cout<<"[INFO] Generating Testcase Input!"<<endl;
-    system("g++ -o generator.exe generator.cpp"); 
     string cmd = generator + ".exe > " + iTest + ".in";
     system(cmd.c_str());
     cout<<"[INFO] Complete!"<<endl;
@@ -17,7 +16,6 @@ void generatorInput(const string &iTest, const string generator){
 // Hàm chạy chương trình trả kết quả
 void generatorOutput(const string &iTest, const string solution){
     cout<<"[INFO] Generating Testcase Output!"<<endl;
-    system("g++ -o solution.exe solution.cpp");
     string cmd = solution + ".exe <" + iTest + ".in > " + iTest +".out";
     system(cmd.c_str());
     cout<<"[INFO] Complete!"<<endl;
@@ -34,6 +32,8 @@ void Complete(){
 }
 int main()
 {
+    system("g++ -o generator.exe generator.cpp");
+    system("g++ -o solution.exe solution.cpp");
     for (int iTest = 1; iTest <= NTEST; iTest++)
     {
        cout<<"[INFO] Creating test "<<iTest <<"!"<<endl;
